@@ -1,0 +1,34 @@
+{
+  "Students": [
+  { 
+    "studentID" : 100,
+    "studentName": "Ajay",
+    "gender": "male",
+    "age" : 23, 
+    "course": "ACDCA",
+    "DOB": "12/12/2002",
+    "grade":  2,
+    "rating":1 
+  },
+  {
+    "studentID" : 101,
+    "studentName": "Ajay",
+    "gender": "male",
+    "age" : 23, 
+    "course": "ACDCA",
+    "DOB": "12/12/2002",
+    "grade":  2,
+    "rating":1 
+  },
+  {
+    "studentID" : 102,
+    "studentName": "Ajay",
+    "gender": "male",
+    "age" : 23, 
+    "course": "ACDCA",
+    "DOB": "12/12/2002",
+    "grade":  2,
+    "rating":1 
+  }
+]
+}

@@ -1,0 +1,23 @@
+<p>product works!</p>
+ 
+<div *ngIf="products.length>0">
+  <table> 
+    <tr> 
+      <th> Product ID </th>
+      <th> Name </th>
+      <th> Price </th>
+    </tr>
+    <tr *ngFor="let product of products">
+      <td> {{product.productID}}</td>
+      <td> {{product.name}}</td>
+      <td> {{product.price}}</td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <label for="txtId" name="txtId"> Enter ID </label>
+<input type="number" [(ngModel)]="id"/>
+<button (click)= "GetProductById()"> Search </button>
+</div>
+<button (click)="AddProduct()"> Add </button>
