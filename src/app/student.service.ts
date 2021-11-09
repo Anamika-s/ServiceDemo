@@ -6,14 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StudentService {
- students : IStudent[];
- path : string ="http://localhost:3000/Students";
- LoadStudents ()
- {
-   console.log("Inside service");
-  //  return this._client.get(this.path);
-  return  this._client .get(this.path);
+  students : any[];
+  path : string ="/assets/data/db.json";
+  //pathForNewApi : string ="https://newsapi.org/v2/top-headlines?country=in&apikey=0819eaed65a043a481d5354c8782b578&page=1";
+  pathforJSON : string ="http://localhost:3000/Students";
 
+  constructor(private _httpClient : HttpClient) { }
+  LoadStudents()  
+ {
+     return this._httpClient.get<IStudent[]>(this.pathforJSON);
  }
-  constructor(private _client : HttpClient) { }
 }

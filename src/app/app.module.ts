@@ -6,6 +6,7 @@ import { HelloService } from './hello-service.service';
 import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentService } from './student.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule, FormsModule
     , HttpClientModule
   ],
-  providers: [HelloService],
+  providers: [HelloService,StudentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

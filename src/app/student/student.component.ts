@@ -4,26 +4,27 @@ import { IStudent } from '../IStudent';
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
-  styleUrls: ['./student.component.css'],
-  providers : [StudentService]
+  styleUrls: ['./student.component.css'] 
+  
 })
 export class StudentComponent implements OnInit {
 
   constructor(private _StudentService : StudentService) { }
    
-   private students  = []; 
-   get_products(){
+     students  : IStudent[];
    
-}
-
-  ngOnInit(): void {
-    console.log("Calling Service");
-    //this.students = this._StudentService.LoadStudents();
-    this._StudentService.LoadStudents().subscribe((res : any[])=>{
-      console.log(res);
-      this.students  =  res;
+ GetStudents ()
+ {
+  console.log("Calling Service");
+  this._StudentService.LoadStudents().subscribe(data=>
+    { console.log(data);
+      this.students = data;
       console.log(this.students.length);
-      });
+    });
+ }
+  ngOnInit(): void {
+   
+     
     }
 
 }
